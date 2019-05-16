@@ -26,13 +26,12 @@ namespace Opgave_1._3
                     Console.WriteLine(number);
                 }
                 Console.ReadKey(true);
-
             }
         }
 
         static List<int> OrderNum(int[] numbers)
         {
-            var orderedNum = numbers.ToList().OrderBy(n => n) as List<int>;
+            var orderedNum = numbers.ToList().OrderBy(n => n).ToList();
             return orderedNum;
         }
     }

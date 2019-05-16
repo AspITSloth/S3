@@ -14,14 +14,22 @@ namespace Opgave_1._2
             {
                 "herp",
                 "derp",
-                "ferp",
+                "9erp",
                 "lerp",
                 "nerp"
             };
 
             while (true)
             {
-                Console.WriteLine(CapitalizedWords(words));
+                try
+                {
+                    Console.WriteLine(CapitalizedWords(words));
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);                    
+                }
+                
                 Console.WriteLine();
 
                 Console.ReadKey(true);
@@ -34,7 +42,14 @@ namespace Opgave_1._2
 
             foreach (var word in words)
             {
-                wordsToString = wordsToString + word[0].ToString().ToUpper() + word.Substring(1) + " ";             
+                if (char.IsLetter(word[0]))
+                {
+                    wordsToString = wordsToString + word[0].ToString().ToUpper() + word.Substring(1) + " ";             
+                }
+                else
+                {
+                    throw new Exception("A word did not start with a letter");
+                }
             }
 
             return wordsToString;
