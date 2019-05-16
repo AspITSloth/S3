@@ -14,7 +14,7 @@ namespace Opgave_1._2
             {
                 "herp",
                 "derp",
-                "9erp",
+                "ferp",
                 "lerp",
                 "nerp"
             };

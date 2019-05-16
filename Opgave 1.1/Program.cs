@@ -23,7 +23,15 @@ namespace Opgave_1._1
                 num2 = ran.Next(1, 10);
                 num3 = ran.Next(1, 10);
 
-                Console.WriteLine($"Three random numbers: {num1}-{num2}-{num3} | Highest number is: {HighestNumber(num1, num2, num3)}");
+                try
+                {
+                    Console.WriteLine($"Three random numbers: {num1}-{num2}-{num3} | Highest number is: {HighestNumber(num1, num2, num3)}");
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+
                 Console.ReadKey(true);
             }
 
